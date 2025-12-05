@@ -1,66 +1,86 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        
+        {/* Featured Cakes Section */}
+        <section className="py-5">
+          <div className="container">
+            <div className="text-center mb-5">
+              <h2 className="section-title d-inline-block">Popular Creations</h2>
+              <p className="lead" style={{ color: 'var(--gray-dark)' }}>
+                Most requested cakes and desserts
+              </p>
+            </div>
+            
+            <div className="row g-4">
+              {[
+                { src:'images/gallery/a18.png', title: 'Tres Leches Cake', desc: 'Traditional three-milk cake in various flavors' },
+                { src:'images/gallery/a34.jpg', title: 'Chocolate Cake', desc: 'Rich chocolate cake with creamy frosting' },
+                { src:'images/gallery/a10.jpg', title: 'Teddy Bear Cake', desc: 'Perfect for Baby Showers & Birthdays' },
+                { src:'images/gallery/a15.jpg', title: 'Personalized Cakes', desc: 'Custom designs for any occasion' },
+                { src:'images/gallery/a17.jpg', title: 'Sweets Collection', desc: 'Dessert tables and party treats' },
+                { src:'images/gallery/a62.jpg', title: 'Gentleman Cakes', desc: 'Special cakes for men\'s celebrations' }
+              ].map((cake, index) => (
+                <div key={index} className="col-md-4">
+                  <div className="card card-hover minimal-border h-100 border-0" style={{ background: 'var(--off-white)' }}>
+                    <div className="card-body text-center p-4">
+                      <div className="mb-3" style={{ 
+                        width: '80px',
+                        height: '80px',
+                        borderRadius: '50%',
+                        margin: '0 auto',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}>
+                        {/* <i className="bi bi-cake2-fill text-white" style={{ fontSize: '2rem' }}>{cake.src}</i> */}
+<Image
+  src={`${cake.src}`}
+  alt="Cake"
+  width={150}
+  height={75}
+  className="object-contain"
+  sizes="64px"
+/>
+                      </div>
+                      <h5 className="fw-bold mb-3">{cake.title}</h5>
+                      <p style={{ color: 'var(--gray-dark)' }}>{cake.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Call to Action */}
+        <section className="py-5" style={{ 
+          background: 'linear-gradient(135deg, var(--neon-orange) 0%, var(--orange-light) 100%)'
+        }}>
+          <div className="container">
+            <div className="text-center text-white">
+              <h2 className="display-5 fw-bold mb-4">Ready to Order Your Perfect Cake?</h2>
+              <p className="lead mb-4">Contact us via Facebook, TikTok, or call us directly!</p>
+              <a href="tel:9047499374" className="btn btn-light btn-lg px-5 py-3 fw-bold" style={{ 
+                color: 'var(--neon-orange)',
+                borderRadius: '50px'
+              }}>
+                <i className="bi bi-whatsapp me-2"></i>
+                Call or Text (904) 749-9374
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
