@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="py-5" style={{ 
@@ -7,29 +9,28 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 mb-4 mb-lg-0">
-            <h3 className="fw-bold neon-text mb-4">Machi's Food & Cakes</h3>
-            <p className="mb-4" style={{ color: 'var(--gray-light)' }}>
+<h3 className="fw-bold neon-text mb-4">{`Machi's Food & Cakes`}</h3>            <p className="mb-4" style={{ color: 'var(--gray-light)' }}>
               Home-based bakery creating delicious, customized cakes and desserts for Jacksonville, Florida.
             </p>
             <div className="d-flex gap-3">
-              <a href="https://www.facebook.com/yenny.villegas.415582" className="text-decoration-none">
+              <Link href="https://www.facebook.com/yenny.villegas.415582" className="text-decoration-none">
                 <i className="bi bi-facebook" style={{ 
                   fontSize: '1.5rem',
                   color: 'var(--neon-orange)'
                 }}></i>
-              </a>
-              <a href="https://www.tiktok.com/@machiscake7" className="text-decoration-none">
+              </Link>
+              <Link href="https://www.tiktok.com/@machiscake7" className="text-decoration-none">
                 <i className="bi bi-tiktok" style={{ 
                   fontSize: '1.5rem',
                   color: 'var(--neon-orange)'
                 }}></i>
-              </a>
-              <a href="/contact" className="text-decoration-none">
+              </Link>
+              <Link href="/contact" className="text-decoration-none">
                 <i className="bi bi-whatsapp" style={{ 
                   fontSize: '1.5rem',
                   color: 'var(--neon-orange)'
                 }}></i>
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -37,29 +38,34 @@ export default function Footer() {
             <h5 className="fw-bold mb-4" style={{ color: 'var(--neon-orange)' }}>Quick Links</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="/" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
+                <Link href="/" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/cakes" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
-                  Our Cakes
-                </a>
+                <Link href="/about" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
+                  About
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/flavors" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
+                <Link href="/price" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
+                  Price
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/flavors" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
                   Flavors
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/gallery" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
+                <Link href="/gallery" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
                   Gallery
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/contact" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
+                <Link href="/contact" className="text-decoration-none" style={{ color: 'var(--gray-light)' }}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,7 +90,7 @@ export default function Footer() {
         <hr className="my-5" style={{ borderColor: 'var(--gray-dark)' }} />
         
         <div className="text-center" style={{ color: 'var(--gray-light)' }}>
-          <p className="mb-0">&copy; {new Date().getFullYear()} Yenny Villegas Cakes. All rights reserved.</p>
+          <p className="mb-0">&copy; {new Date().getFullYear()} {`Machi's Food & Cakes. All rights reserved.`}</p>
           <p className="mb-0">Home Baker in Jacksonville, Florida</p>
         </div>
       </div>

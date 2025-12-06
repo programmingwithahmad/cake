@@ -7,7 +7,14 @@ export default function AboutPage() {
     <>
       <Header />
       <main>
-        <section className="py-5">
+
+        <div className="container py-5">
+          <div className="text-center">
+            <h1 className="display-6 fw-bold neon-text">About Us</h1>
+          </div>
+        </div>
+
+        <section className="pb-5">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6 mb-5 mb-lg-0">
@@ -30,14 +37,14 @@ export default function AboutPage() {
               <div className="col-lg-6">
                 <h2 className="fw-bold mb-4" style={{ color: 'var(--neon-orange)' }}>Meet Yenny</h2>
                 <p className="mb-4" style={{ color: 'var(--gray-dark)' }}>
-                  Hello! I'm Yenny Villegas, a passionate home baker based in beautiful Jacksonville, Florida. 
+                  {`Hello! I'm Yenny Villegas, a passionate home baker based in beautiful Jacksonville, Florida. 
                   My journey into professional baking started in my own kitchen, where I discovered the joy of 
-                  creating beautiful, delicious cakes for family and friends.
+                  creating beautiful, delicious cakes for family and friends.`}
                 </p>
                 <p className="mb-4" style={{ color: 'var(--gray-dark)' }}>
-                  What began as a hobby soon turned into requests from friends, then friends of friends, 
+                  {`What began as a hobby soon turned into requests from friends, then friends of friends, 
                   and now I'm blessed to share my creations with the wonderful Jacksonville community. 
-                  Every cake I make is infused with love, attention to detail, and the highest quality ingredients.
+                  Every cake I make is infused with love, attention to detail, and the highest quality ingredients.`}
                 </p>
                 
                 <div className="row mt-4">

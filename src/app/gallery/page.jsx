@@ -108,7 +108,14 @@ export default function GalleryPage() {
     <>
       <Header />
       <main>
-        <section className="py-5">
+
+        <div className="container py-5">
+          <div className="text-center">
+            <h1 className="display-6 fw-bold neon-text">Gallery</h1>
+          </div>
+        </div>
+
+        <section className="pb-5">
           <div className="container">
             <div className="text-center mb-5">
               <div className="d-inline-flex minimal-border p-1" style={{ background: 'var(--off-white)' }}>

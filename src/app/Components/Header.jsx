@@ -14,7 +14,7 @@ export default function Header() {
     }}>
       <div className="container">
         <Link className="navbar-brand fw-bold fs-3 neon-text" href="/">
-          Machi's Food & Cakes
+          {`Machi's Food & Cakes`}
         </Link>
         
         <button 
@@ -34,12 +34,12 @@ export default function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fw-semibold mx-2" href="/about" style={{ color: 'var(--gray-dark)' }}>
+              <Link className="nav-link fw-semibold mx-2" href={"/about"} style={{ color: 'var(--gray-dark)' }}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fw-semibold mx-2" href="/price" style={{ color: 'var(--gray-dark)' }}>
+              <Link className="nav-link fw-semibold mx-2" href={'/price'} style={{ color: 'var(--gray-dark)' }}>
                 Price
               </Link>
             </li>

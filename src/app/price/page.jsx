@@ -15,7 +15,7 @@ export default function PricingPage() {
         {/* Simple Pricing Title at Top */}
         <div className="container py-5">
           <div className="text-center">
-            <h1 className="display-4 fw-bold neon-text">Price</h1>
+            <h1 className="display-6 fw-bold neon-text">Price</h1>
           </div>
         </div>
 

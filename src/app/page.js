@@ -2,6 +2,7 @@ import Header from './Components/Header';
 import Hero from './Components/Hero';
 import Footer from './Components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -67,15 +68,15 @@ export default function Home() {
         }}>
           <div className="container">
             <div className="text-center text-white">
-              <h2 className="display-5 fw-bold mb-4">Ready to Order Your Perfect Cake?</h2>
+              <h2 className="display-6 fw-bold mb-4">Ready to Order Your Perfect Cake?</h2>
               <p className="lead mb-4">Contact us via Facebook, TikTok, or call us directly!</p>
-              <a href="tel:9047499374" className="btn btn-light btn-lg px-5 py-3 fw-bold" style={{ 
+              <Link href="tel:9047499374" className="btn btn-light btn-lg px-5 py-3 fw-bold" style={{ 
                 color: 'var(--neon-orange)',
                 borderRadius: '50px'
               }}>
                 <i className="bi bi-whatsapp me-2"></i>
                 Call or Text (904) 749-9374
-              </a>
+              </Link>
             </div>
           </div>
         </section>

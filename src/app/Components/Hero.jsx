@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
         <div className="row align-items-center">
           <div className="col-lg-6 mb-5 mb-lg-0">
             <div className="animate-fade-in-up">
-              <h1 className="display-3 fw-bold mb-4">
+              <h1 className="display-6 fw-bold mb-4">
                 <span className="neon-text">Custom Cakes</span> Made With Love in Jacksonville
               </h1>
               <p className="lead mb-4" style={{ color: 'var(--gray-dark)' }}>
@@ -20,17 +21,17 @@ export default function Hero() {
                 Perfect for birthdays, celebrations, and special moments in Florida.
               </p>
               <div className="d-flex flex-wrap gap-3">
-                <a href="/contact" className="btn neon-btn">
-                  Order Your Cake
-                </a>
-                <a href="/gallery" className="btn btn-outline" style={{ 
+                <Link href="/contact" className="btn neon-btn">
+                  Order Your Cake 🍰
+                </Link>
+                <Link href="/gallery" className="btn btn-outline" style={{ 
                   borderColor: 'var(--neon-orange)',
                   color: 'var(--neon-orange)',
                   borderRadius: '50px',
                   padding: '12px 30px'
                 }}>
                   View Gallery
-                </a>
+                </Link>
               </div>
               <div className="mt-5">
                 <h6 className="text-uppercase mb-3" style={{ color: 'var(--neon-orange)' }}>

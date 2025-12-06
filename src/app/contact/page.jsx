@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ Details: ${formData.details}
         }}>
           <div className="container">
             <div className="text-center py-5">
-              <h1 className="display-4 fw-bold mb-4 neon-text">Order Your Cake</h1>
+              <h1 className="display-6 fw-bold mb-4 neon-text">Order Your Cake</h1>
               <p className="lead" style={{ color: 'var(--gray-dark)', maxWidth: '700px', margin: '0 auto' }}>
                 Ready to order your custom cake? Contact us through any of these methods or fill out the inquiry form.
               </p>
@@ -78,10 +79,10 @@ Details: ${formData.details}
                   <p className="mb-3" style={{ color: 'var(--gray-dark)' }}>
                     Fastest way to reach us for orders and inquiries
                   </p>
-                  <a href="tel:9047499374" className="btn neon-btn">
+                  <Link href="tel:9047499374" className="btn neon-btn">
                     <i className="bi bi-whatsapp me-2"></i>
                     (904) 749-9374
-                  </a>
+                  </Link>
                 </div>
               </div>
               
@@ -103,7 +104,7 @@ Details: ${formData.details}
                   <p className="mb-3" style={{ color: 'var(--gray-dark)' }}>
                     Message us on Facebook for orders and updates
                   </p>
-                  <a href="https://www.facebook.com/yenny.villegas.415582" className="btn" style={{ 
+                  <Link href="https://www.facebook.com/yenny.villegas.415582" className="btn" style={{ 
                     background: '#1877F2',
                     color: 'white',
                     borderRadius: '50px',
@@ -111,7 +112,7 @@ Details: ${formData.details}
                   }}>
                     <i className="bi bi-facebook me-2"></i>
                     Visit Page
-                  </a>
+                  </Link>
                 </div>
               </div>
               
@@ -133,7 +134,7 @@ Details: ${formData.details}
                   <p className="mb-3" style={{ color: 'var(--gray-dark)' }}>
                     Follow and message us on TikTok for getting updates
                   </p>
-                  <a href="https://www.tiktok.com/@machiscake7" className="btn" style={{ 
+                  <Link href="https://www.tiktok.com/@machiscake7" className="btn" style={{ 
                     background: 'black',
                     color: 'white',
                     borderRadius: '50px',
@@ -141,7 +142,7 @@ Details: ${formData.details}
                   }}>
                     <i className="bi bi-tiktok me-2"></i>
                     Follow Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -188,8 +189,8 @@ Details: ${formData.details}
                     Pickup Hours
                   </h5>
                   <p style={{ color: 'var(--gray-dark)' }}>
-                    Pickup times are arranged individually based on your order and schedule. 
-                    We'll coordinate the perfect pickup time when you place your order.
+                    {`Pickup times are arranged individually based on your order and schedule. 
+                    We'll coordinate the perfect pickup time when you place your order.`}
                   </p>
                 </div>
                 

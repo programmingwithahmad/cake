@@ -1,5 +1,6 @@
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import Link from 'next/link';
 
 export default function FlavorsPage() {
   const flavors = [
@@ -48,7 +49,7 @@ export default function FlavorsPage() {
         }}>
           <div className="container">
             <div className="text-center py-5">
-              <h1 className="display-4 fw-bold mb-4 neon-text">Our Flavors</h1>
+              <h1 className="display-6 fw-bold mb-4 neon-text">Our Flavors</h1>
               <p className="lead" style={{ color: 'var(--gray-dark)', maxWidth: '700px', margin: '0 auto' }}>
                 Explore our wide range of delicious flavors and fillings. Each creation is made with high-quality ingredients and lots of love.
               </p>
@@ -92,7 +93,7 @@ export default function FlavorsPage() {
                   }}>
                     <h6 className="fw-bold mb-2">Instructions:</h6>
                     <p className="mb-0" style={{ fontSize: '0.9rem' }}>
-                      Melt the dulce de leche with chocolate in a double boiler, whisk for two minutes when the chocolate has dissolved, then start adding the butter into pieces, whisk for ten minutes and that's it! Refrigerate and use.
+                      {`Melt the dulce de leche with chocolate in a double boiler, whisk for two minutes when the chocolate has dissolved, then start adding the butter into pieces, whisk for ten minutes and that's it! Refrigerate and use.`}
                     </p>
                   </div>
                 </div>
@@ -157,10 +158,10 @@ export default function FlavorsPage() {
               <p className="lead mb-4" style={{ color: 'var(--gray-dark)', maxWidth: '700px', margin: '0 auto' }}>
                 Have a special flavor in mind? We love creating custom combinations for our customers!
               </p>
-              <a href="/contact" className="btn neon-btn px-5">
+              <Link href="/contact" className="btn neon-btn px-5">
                 <i className="bi bi-chat-dots me-2"></i>
                 Discuss Your Custom Cake
-              </a>
+              </Link>
             </div>
           </div>
         </section>
